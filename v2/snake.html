@@ -30,6 +30,7 @@
   <script>
     var canvas = document.getElementById('game');
     var context = canvas.getContext('2d');
+
     var grid = 16;
     var count = 0;
 
@@ -47,15 +48,18 @@
       // length of the snake. grows when eating an apple
       maxCells: 4
     };
+
     var apple = {
       x: 320,
       y: 320
     };
+
     // get random whole numbers in a specific range
     // @see https://stackoverflow.com/a/1527820/2124254
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (max - min)) + min;
     }
+    
     // game loop
     function loop() {
       requestAnimationFrame(loop);
